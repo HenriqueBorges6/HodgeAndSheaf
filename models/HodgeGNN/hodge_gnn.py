@@ -129,30 +129,38 @@ class HodgeConvLayer(nn.Module):
         
         return out
     
-
+from torch_geometric.nn import global_mean_pool, global_max_pool, global_add_pool
 class HodgeGNN(nn.Module):
     def __init__(self, 
+                 num_edge_features=4,  # ← NOVO! MUTAG tem 4
                  num_classes=2,
-                 hidden_dims=[64, 64, 32],          # Convoluções
-                 mlp_hidden_dims=[128, 64],         
+                 hidden_dims=[64, 64, 32],
+                 mlp_hidden_dims=[128, 64],
                  pooling='mean',
                  dropout=0.5,
                  batch_norm=True,
                  activation='relu',
-                 normalize_L1=True):
+                 normalize_L1=True,
+                 use_edge_attr=True):  # ← NOVO!
         super().__init__()
         
         self.pooling = pooling
         self.normalize_L1 = normalize_L1
+        self.use_edge_attr = use_edge_attr
         
-        # Convoluções (igual antes)
+        # Primeira camada de convolução
+        # Se usar edge_attr: entrada tem num_edge_features dimensões
+        # Se não: entrada tem 1 dimensão (só 1s)
+        input_dim = num_edge_features if use_edge_attr else 1
+        
         self.convs = nn.ModuleList()
         self.convs.append(
-            HodgeConvLayer(1, hidden_dims[0], 
+            HodgeConvLayer(input_dim, hidden_dims[0],  # ← Mudou de 1 para input_dim
                           batch_norm=batch_norm,
                           activation=activation,
                           dropout=dropout)
         )
+        
         for i in range(len(hidden_dims) - 1):
             self.convs.append(
                 HodgeConvLayer(hidden_dims[i], hidden_dims[i+1],
@@ -161,72 +169,59 @@ class HodgeGNN(nn.Module):
                               dropout=dropout)
             )
         
-        # MLP Classificador - CUSTOMIZÁVEL! ✨
+        # MLP (igual antes)
         mlp_layers = []
-        
-        # Input do MLP: saída das convoluções após pooling
         input_dim = hidden_dims[-1]
-        
-        # Camadas ocultas do MLP
         for mlp_dim in mlp_hidden_dims:
-            mlp_layers.append(nn.Linear(input_dim, mlp_dim))
-            mlp_layers.append(nn.ReLU())
-            mlp_layers.append(nn.Dropout(dropout))
+            mlp_layers.extend([
+                nn.Linear(input_dim, mlp_dim),
+                nn.ReLU(),
+                nn.Dropout(dropout)
+            ])
             input_dim = mlp_dim
-        
-        # Camada final: última hidden_dim → num_classes
         mlp_layers.append(nn.Linear(input_dim, num_classes))
-        
         self.classifier = nn.Sequential(*mlp_layers)
-                
-    def forward(self, x, edge_index, batch):
+        
+    def forward(self, x, edge_index, batch, edge_attr=None):  # ← NOVO argumento!
         """
         Args:
-            x: [num_nodes, num_node_features] - NÃO USADO! 
-               (HodgeGNN opera apenas em arestas)
-            edge_index: [2, num_edges] - conectividade
-            batch: [num_nodes] - indica qual nó pertence a qual grafo
-        
-        Returns:
-            logits: [batch_size, num_classes]
+            x: [num_nodes, num_node_features] - não usado (por enquanto)
+            edge_index: [2, num_edges]
+            batch: [num_nodes]
+            edge_attr: [num_edges, num_edge_features] ← NOVO!
         """
         device = edge_index.device
         num_nodes = x.shape[0]
         num_edges = edge_index.shape[1]
         
-        # Extrair edge_batch: qual aresta pertence a qual grafo
-        # edge_batch[i] = índice do grafo ao qual a aresta i pertence
-        edge_batch = batch[edge_index[0]]  # [num_edges]
+        edge_batch = batch[edge_index[0]]
         
-        # ===== PASSO 1: Calcular Hodge Laplacian L1 =====
+        # 1. Calcular L1
         L1, B1 = compute_hodge_laplacian_L1(edge_index, num_nodes)
-        
-        # Normalizar L1 (opcional, mas geralmente melhora)
         if self.normalize_L1:
             L1 = normalize_hodge_laplacian(L1)
         
-        # ===== PASSO 2: Edge Features Iniciais =====
-        # No paper, eles usam os pesos das arestas
-        # Como MUTAG tem edge_attr, podemos usar
-        # Por simplicidade, vamos usar "grau" das arestas como feature inicial
-        edge_features = torch.ones(num_edges, 1, device=device)  # [num_edges, 1]
+        # 2. Edge Features Iniciais
+        if self.use_edge_attr and edge_attr is not None:
+            # Usar edge attributes do dataset! ✅
+            h = edge_attr.float()  # [num_edges, num_edge_features]
+        else:
+            # Fallback: apenas 1s
+            h = torch.ones(num_edges, 1, device=device)
         
-        # ===== PASSO 3: Convoluções em Arestas =====
-        h = edge_features
+        # 3. Convoluções
         for conv in self.convs:
             h = conv(h, L1)
-        # h agora é [num_edges, hidden_dims[-1]]
         
-        # ===== PASSO 4: Pooling (agregar arestas → grafo) =====
+        # 4. Pooling
         if self.pooling == 'mean':
             h_graph = global_mean_pool(h, edge_batch)
         elif self.pooling == 'max':
             h_graph = global_max_pool(h, edge_batch)
         elif self.pooling == 'sum':
             h_graph = global_add_pool(h, edge_batch)
-        # h_graph agora é [batch_size, hidden_dims[-1]]
         
-        # ===== PASSO 5: Classificação =====
+        # 5. Classificação
         logits = self.classifier(h_graph)
         
         return logits
