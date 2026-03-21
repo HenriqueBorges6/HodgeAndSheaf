@@ -12,7 +12,7 @@ class ConnectionConv(nn.Module):
     def forward(self, x, edge_index, O_edges):
         src = edge_index[0]
         dst = edge_index[1]
-        deg = degree(dst, num_nodes=x.size(0))
+        deg = degree(dst, num_nodes=x.size(0)).clamp(min=1.0)
 
         m_u = self.W_msg(x[src])
 

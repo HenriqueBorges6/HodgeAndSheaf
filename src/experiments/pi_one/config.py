@@ -1,7 +1,7 @@
 CONFIG = {
     "dataset": "MUTAG",
     "batch_size": 32,
-    "epochs": 100,
+    "epochs": 200,
     "seed": 1,
     "lr": 0.001,
     "weight_decay": 0,
@@ -14,5 +14,6 @@ CONFIG = {
         "num_layes": 3,
         "out_dim": 2,
         "num_powers": 3,
+        "mlp_dims": [(64, "relu")],   # lista de (hidden_dim, activation) — [] para Linear direto
     }
 }

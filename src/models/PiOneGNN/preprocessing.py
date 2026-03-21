@@ -1,10 +1,12 @@
 import warnings
 warnings.filterwarnings("ignore")
 
+import torch
 import networkx as nx
 
+
 def extract_cycle_basis(data):
-    edges = data.edge_index.t().tolist() 
+    edges = data.edge_index.t().tolist()
     G = nx.Graph()
     G.add_nodes_from(range(data.num_nodes))
     G.add_edges_from(edges)
@@ -27,8 +29,21 @@ def build_edge_index_map(edge_index):
 
 def preprocess_dataset(dataset):
     for data in dataset:
-        cycles = extract_cycle_basis(data)
-        data.cycles = []
-        for cycle in cycles:
-            data.cycles.append(cycle_nodes_to_edges(cycle))
-        data.edge_map = build_edge_index_map(data.edge_index)  
+        cycles_nodes = extract_cycle_basis(data)
+        edge_map = build_edge_index_map(data.edge_index)
+
+        cycle_idxs = []   # lista de tensores [L_c], índices de arestas
+        cycle_flips = []  # lista de tensores [L_c], bool (transpor O?)
+
+        for cycle_nodes in cycles_nodes:
+            cycle_edges = cycle_nodes_to_edges(cycle_nodes)
+            idxs, flips = [], []
+            for (src, dst) in cycle_edges:
+                idx, is_rev = edge_map[(src, dst)]
+                idxs.append(idx)
+                flips.append(is_rev)
+            cycle_idxs.append(torch.tensor(idxs, dtype=torch.long))
+            cycle_flips.append(torch.tensor(flips, dtype=torch.bool))
+
+        data.cycle_idxs = cycle_idxs
+        data.cycle_flips = cycle_flips
