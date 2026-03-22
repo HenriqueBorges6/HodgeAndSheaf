@@ -1,7 +1,15 @@
+import time
+
 import torch
 import torch.nn as nn
 
 from .cosheaf_learner import CoSheafLearner
+
+
+def _sync(device):
+    """Sincroniza CUDA antes de medir tempo (noop em CPU)."""
+    if device.type == 'cuda':
+        torch.cuda.synchronize()
 
 
 class CoSheafConv(nn.Module):
@@ -24,6 +32,8 @@ class CoSheafConv(nn.Module):
         self.stalk_linears = nn.ModuleList([
             nn.Linear(in_channels, out_channels) for _ in range(d)
         ])
+        self._profile = False
+        self._timings = {}
 
     def forward(
         self,
@@ -37,11 +47,19 @@ class CoSheafConv(nn.Module):
         # line_edge_index  : (2, E_L)
         # signs            : (E_L,)
         # retorna          : (m, d, out_channels)
+        p   = self._profile
+        dev = x.device
 
+        if p: _sync(dev); t0 = time.time()
         maps = self.learner(x, line_edge_index)                            # (m, d, d)
+        if p: _sync(dev); self._timings['learn_maps'] = time.time() - t0
+
+        if p: t0 = time.time()
         # Cada dimensao do stalk recebe projecao propria (quebra simetria)
         x    = torch.stack([lin(x) for lin in self.stalk_linears], dim=1)  # (m, d, out_channels)
+        if p: _sync(dev); self._timings['stalk_embed'] = time.time() - t0
 
+        if p: t0 = time.time()
         num_edges = edge_index.shape[1]
         src, tgt  = line_edge_index
 
@@ -58,5 +76,6 @@ class CoSheafConv(nn.Module):
         D    = torch.zeros(num_edges, 1, 1, device=x.device, dtype=x.dtype).scatter_add(
                    0, tgt.view(-1, 1, 1), torch.ones(tgt.shape[0], 1, 1, device=x.device, dtype=x.dtype)
                )
+        if p: _sync(dev); self._timings['diffusion'] = time.time() - t0
 
         return D * x - agg

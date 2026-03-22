@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch_householder import torch_householder_orgqr
 
 
 def _sparse_adj(edge_index: torch.Tensor, n: int) -> torch.Tensor:
@@ -59,8 +58,11 @@ class Orthogonal(nn.Module):
 
 class HouseholderOrthogonal(nn.Module):
     """
-    Parametriza matrizes ortogonais d x d via reflexoes de Householder.
-    Usa torch_householder_orgqr para converter vetores de reflexao em Q.
+    Parametriza matrizes ortogonais d x d via decomposicao QR (Householder).
+    Usa torch.linalg.qr nativo — sem dependencia de extensoes C++.
+
+    Constroi uma matriz A = I + L (L triangular inferior parametrizada)
+    e retorna o fator Q da decomposicao QR de A.
     """
 
     def __init__(self, d: int):
@@ -76,7 +78,8 @@ class HouseholderOrthogonal(nn.Module):
         A = torch.zeros(m, self.d, self.d, device=params.device, dtype=params.dtype)
         A[:, idx[0], idx[1]] = params
         A = A + eye
-        return torch_householder_orgqr(A)
+        Q, _ = torch.linalg.qr(A)
+        return Q
 
 
 _ORTH_MAP = {"cayley": Orthogonal, "householder": HouseholderOrthogonal}
