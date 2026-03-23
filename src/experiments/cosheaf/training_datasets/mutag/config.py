@@ -24,7 +24,7 @@ GRID = {
     "mlp_dims":        [[64],],
     "dropout":         [0.0,],
     "backbone":        ["sage", "gin"],
-    "orth_method":     ["cayley", "householder"],
+    "orth_method":     ["cayley"],
     "lr":              [0.01, 0.001],
     "weight_decay":    [0.0, 1e-4],
     "edge_feat_mode":  ["none"],
