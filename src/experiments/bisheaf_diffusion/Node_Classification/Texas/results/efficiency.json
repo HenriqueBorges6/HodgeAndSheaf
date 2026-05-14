@@ -1,0 +1,16 @@
+{
+  "samples": 1601,
+  "duration_s": 3483.3,
+  "bottleneck": "GPU",
+  "gpu": {
+    "mean_free_mb": 5047.1,
+    "mean_util_pct": 97.7,
+    "max_peak_mb": 31.4
+  },
+  "ram": {
+    "mean_free_mb": 4230.9,
+    "min_free_mb": 83.9,
+    "mean_used_pct": 73.7,
+    "peak_used_pct": 99.5
+  }
+}

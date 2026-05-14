@@ -1,0 +1,869 @@
+{
+  "dataset": "Citeseer",
+  "raw": [
+    {
+      "config": "d2_h64_Fort_Cort_gin_dr25_L2_lr3_wd3",
+      "split_idx": 2,
+      "val_acc": 0.4400000274181366,
+      "test_acc": 0.41200003027915955,
+      "time_s": 26.27,
+      "peak_mb": 232.82421875,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 2,
+        "model": {
+          "d": 2,
+          "hidden_channels": 64,
+          "num_layers": 2,
+          "learner_hidden": 128,
+          "learner_gnn_layers": 3,
+          "dropout": 0.25,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            64
+          ],
+          "backbone_F": "gin",
+          "backbone_C": "gin",
+          "map_type_F": "orthogonal",
+          "map_type_C": "orthogonal",
+          "orth_trans": "cayley",
+          "sheaf_act": "relu",
+          "inter_layer_norm": false
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d2_h64_Fort_Cort_gin_dr25_L2_lr3_wd3",
+      "split_idx": 1,
+      "val_acc": 0.42600002884864807,
+      "test_acc": 0.4180000126361847,
+      "time_s": 26.52,
+      "peak_mb": 232.82421875,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 1,
+        "model": {
+          "d": 2,
+          "hidden_channels": 64,
+          "num_layers": 2,
+          "learner_hidden": 128,
+          "learner_gnn_layers": 3,
+          "dropout": 0.25,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            64
+          ],
+          "backbone_F": "gin",
+          "backbone_C": "gin",
+          "map_type_F": "orthogonal",
+          "map_type_C": "orthogonal",
+          "orth_trans": "cayley",
+          "sheaf_act": "relu",
+          "inter_layer_norm": false
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d2_h128_Fort_Cgen_sage_dr0_L4_lr3_wd3",
+      "split_idx": 0,
+      "val_acc": 0.5480000376701355,
+      "test_acc": 0.5490000247955322,
+      "time_s": 240.45,
+      "peak_mb": 430.74609375,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 0,
+        "model": {
+          "d": 2,
+          "hidden_channels": 128,
+          "num_layers": 4,
+          "learner_hidden": 128,
+          "learner_gnn_layers": 2,
+          "dropout": 0,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            128
+          ],
+          "backbone_F": "sage",
+          "backbone_C": "sage",
+          "map_type_F": "orthogonal",
+          "map_type_C": "general",
+          "orth_trans": "cayley",
+          "sheaf_act": "gelu",
+          "inter_layer_norm": true
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d3_h64_Fort_Cort_gcn_dr0_L4_lr3_wd3",
+      "split_idx": 0,
+      "val_acc": 0.4520000219345093,
+      "test_acc": 0.43800002336502075,
+      "time_s": 63.5,
+      "peak_mb": 305.78076171875,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 0,
+        "model": {
+          "d": 3,
+          "hidden_channels": 64,
+          "num_layers": 4,
+          "learner_hidden": 64,
+          "learner_gnn_layers": 3,
+          "dropout": 0,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            64
+          ],
+          "backbone_F": "gcn",
+          "backbone_C": "gcn",
+          "map_type_F": "orthogonal",
+          "map_type_C": "orthogonal",
+          "orth_trans": "cayley",
+          "sheaf_act": "tanh",
+          "inter_layer_norm": true
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d2_h128_Fort_Cgen_sage_dr0_L4_lr3_wd3",
+      "split_idx": 2,
+      "val_acc": 0.578000009059906,
+      "test_acc": 0.5820000171661377,
+      "time_s": 292.77,
+      "peak_mb": 428.5185546875,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 2,
+        "model": {
+          "d": 2,
+          "hidden_channels": 128,
+          "num_layers": 4,
+          "learner_hidden": 128,
+          "learner_gnn_layers": 2,
+          "dropout": 0,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            128
+          ],
+          "backbone_F": "sage",
+          "backbone_C": "sage",
+          "map_type_F": "orthogonal",
+          "map_type_C": "general",
+          "orth_trans": "cayley",
+          "sheaf_act": "gelu",
+          "inter_layer_norm": true
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d2_h128_Fort_Cgen_sage_dr0_L4_lr3_wd3",
+      "split_idx": 1,
+      "val_acc": 0.578000009059906,
+      "test_acc": 0.5900000333786011,
+      "time_s": 333.14,
+      "peak_mb": 428.5185546875,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 1,
+        "model": {
+          "d": 2,
+          "hidden_channels": 128,
+          "num_layers": 4,
+          "learner_hidden": 128,
+          "learner_gnn_layers": 2,
+          "dropout": 0,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            128
+          ],
+          "backbone_F": "sage",
+          "backbone_C": "sage",
+          "map_type_F": "orthogonal",
+          "map_type_C": "general",
+          "orth_trans": "cayley",
+          "sheaf_act": "gelu",
+          "inter_layer_norm": true
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d3_h64_Fgen_Cort_gin_dr5_L4_lr3_wd3",
+      "split_idx": 0,
+      "val_acc": 0.3880000114440918,
+      "test_acc": 0.3700000047683716,
+      "time_s": 52.99,
+      "peak_mb": 445.38232421875,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 0,
+        "model": {
+          "d": 3,
+          "hidden_channels": 64,
+          "num_layers": 4,
+          "learner_hidden": 128,
+          "learner_gnn_layers": 3,
+          "dropout": 0.5,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            64
+          ],
+          "backbone_F": "gin",
+          "backbone_C": "gin",
+          "map_type_F": "general",
+          "map_type_C": "orthogonal",
+          "orth_trans": "cayley",
+          "sheaf_act": "relu",
+          "inter_layer_norm": false
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d3_h64_Fgen_Cort_gin_dr5_L4_lr3_wd3",
+      "split_idx": 1,
+      "val_acc": 0.31800001859664917,
+      "test_acc": 0.28600001335144043,
+      "time_s": 53.65,
+      "peak_mb": 445.38232421875,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 1,
+        "model": {
+          "d": 3,
+          "hidden_channels": 64,
+          "num_layers": 4,
+          "learner_hidden": 128,
+          "learner_gnn_layers": 3,
+          "dropout": 0.5,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            64
+          ],
+          "backbone_F": "gin",
+          "backbone_C": "gin",
+          "map_type_F": "general",
+          "map_type_C": "orthogonal",
+          "orth_trans": "cayley",
+          "sheaf_act": "relu",
+          "inter_layer_norm": false
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d3_h64_Fgen_Cort_gin_dr5_L4_lr3_wd3",
+      "split_idx": 2,
+      "val_acc": 0.33400002121925354,
+      "test_acc": 0.289000004529953,
+      "time_s": 61.8,
+      "peak_mb": 445.38232421875,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 2,
+        "model": {
+          "d": 3,
+          "hidden_channels": 64,
+          "num_layers": 4,
+          "learner_hidden": 128,
+          "learner_gnn_layers": 3,
+          "dropout": 0.5,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            64
+          ],
+          "backbone_F": "gin",
+          "backbone_C": "gin",
+          "map_type_F": "general",
+          "map_type_C": "orthogonal",
+          "orth_trans": "cayley",
+          "sheaf_act": "relu",
+          "inter_layer_norm": false
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d3_h64_Fort_Cgen_gcn_dr5_L3_lr3_wd3",
+      "split_idx": 0,
+      "val_acc": 0.4000000059604645,
+      "test_acc": 0.39400002360343933,
+      "time_s": 30.82,
+      "peak_mb": 244.376953125,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 0,
+        "model": {
+          "d": 3,
+          "hidden_channels": 64,
+          "num_layers": 3,
+          "learner_hidden": 64,
+          "learner_gnn_layers": 2,
+          "dropout": 0.5,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            128
+          ],
+          "backbone_F": "gcn",
+          "backbone_C": "gcn",
+          "map_type_F": "orthogonal",
+          "map_type_C": "general",
+          "orth_trans": "cayley",
+          "sheaf_act": "gelu",
+          "inter_layer_norm": false
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d3_h64_Fort_Cgen_gcn_dr5_L3_lr3_wd3",
+      "split_idx": 1,
+      "val_acc": 0.4220000207424164,
+      "test_acc": 0.37400001287460327,
+      "time_s": 28.66,
+      "peak_mb": 244.376953125,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 1,
+        "model": {
+          "d": 3,
+          "hidden_channels": 64,
+          "num_layers": 3,
+          "learner_hidden": 64,
+          "learner_gnn_layers": 2,
+          "dropout": 0.5,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            128
+          ],
+          "backbone_F": "gcn",
+          "backbone_C": "gcn",
+          "map_type_F": "orthogonal",
+          "map_type_C": "general",
+          "orth_trans": "cayley",
+          "sheaf_act": "gelu",
+          "inter_layer_norm": false
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d3_h64_Fort_Cgen_gcn_dr5_L3_lr3_wd3",
+      "split_idx": 2,
+      "val_acc": 0.4140000343322754,
+      "test_acc": 0.4230000078678131,
+      "time_s": 29.29,
+      "peak_mb": 244.376953125,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 2,
+        "model": {
+          "d": 3,
+          "hidden_channels": 64,
+          "num_layers": 3,
+          "learner_hidden": 64,
+          "learner_gnn_layers": 2,
+          "dropout": 0.5,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            128
+          ],
+          "backbone_F": "gcn",
+          "backbone_C": "gcn",
+          "map_type_F": "orthogonal",
+          "map_type_C": "general",
+          "orth_trans": "cayley",
+          "sheaf_act": "gelu",
+          "inter_layer_norm": false
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d4_h64_Fort_Cgen_mlp_dr0_L4_lr3_wd3",
+      "split_idx": 0,
+      "val_acc": 0.43400001525878906,
+      "test_acc": 0.39000001549720764,
+      "time_s": 27.3,
+      "peak_mb": 359.10986328125,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 0,
+        "model": {
+          "d": 4,
+          "hidden_channels": 64,
+          "num_layers": 4,
+          "learner_hidden": 64,
+          "learner_gnn_layers": 3,
+          "dropout": 0,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            64
+          ],
+          "backbone_F": "mlp",
+          "backbone_C": "mlp",
+          "map_type_F": "orthogonal",
+          "map_type_C": "general",
+          "orth_trans": "cayley",
+          "sheaf_act": "id",
+          "inter_layer_norm": false
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d3_h64_Fort_Cort_gcn_dr0_L4_lr3_wd3",
+      "split_idx": 1,
+      "val_acc": 0.5800000429153442,
+      "test_acc": 0.6100000143051147,
+      "time_s": 487.48,
+      "peak_mb": 305.78076171875,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 1,
+        "model": {
+          "d": 3,
+          "hidden_channels": 64,
+          "num_layers": 4,
+          "learner_hidden": 64,
+          "learner_gnn_layers": 3,
+          "dropout": 0,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            64
+          ],
+          "backbone_F": "gcn",
+          "backbone_C": "gcn",
+          "map_type_F": "orthogonal",
+          "map_type_C": "orthogonal",
+          "orth_trans": "cayley",
+          "sheaf_act": "tanh",
+          "inter_layer_norm": true
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d3_h64_Fort_Cort_gcn_dr0_L4_lr3_wd3",
+      "split_idx": 2,
+      "val_acc": 0.5700000524520874,
+      "test_acc": 0.5700000524520874,
+      "time_s": 485.95,
+      "peak_mb": 305.74072265625,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 2,
+        "model": {
+          "d": 3,
+          "hidden_channels": 64,
+          "num_layers": 4,
+          "learner_hidden": 64,
+          "learner_gnn_layers": 3,
+          "dropout": 0,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            64
+          ],
+          "backbone_F": "gcn",
+          "backbone_C": "gcn",
+          "map_type_F": "orthogonal",
+          "map_type_C": "orthogonal",
+          "orth_trans": "cayley",
+          "sheaf_act": "tanh",
+          "inter_layer_norm": true
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d4_h128_Fort_Cgen_mlp_dr0_L4_lr3_wd3",
+      "split_idx": 0,
+      "val_acc": 0.41600000858306885,
+      "test_acc": 0.359000027179718,
+      "time_s": 37.68,
+      "peak_mb": 614.029296875,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 0,
+        "model": {
+          "d": 4,
+          "hidden_channels": 128,
+          "num_layers": 4,
+          "learner_hidden": 128,
+          "learner_gnn_layers": 2,
+          "dropout": 0,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            64
+          ],
+          "backbone_F": "mlp",
+          "backbone_C": "mlp",
+          "map_type_F": "orthogonal",
+          "map_type_C": "general",
+          "orth_trans": "cayley",
+          "sheaf_act": "gelu",
+          "inter_layer_norm": false
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d4_h64_Fort_Cgen_mlp_dr0_L4_lr3_wd3",
+      "split_idx": 1,
+      "val_acc": 0.5400000214576721,
+      "test_acc": 0.5560000538825989,
+      "time_s": 206.1,
+      "peak_mb": 359.10986328125,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 1,
+        "model": {
+          "d": 4,
+          "hidden_channels": 64,
+          "num_layers": 4,
+          "learner_hidden": 64,
+          "learner_gnn_layers": 3,
+          "dropout": 0,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            64
+          ],
+          "backbone_F": "mlp",
+          "backbone_C": "mlp",
+          "map_type_F": "orthogonal",
+          "map_type_C": "general",
+          "orth_trans": "cayley",
+          "sheaf_act": "id",
+          "inter_layer_norm": false
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d4_h128_Fort_Cgen_mlp_dr0_L4_lr3_wd3",
+      "split_idx": 1,
+      "val_acc": 0.5420000553131104,
+      "test_acc": 0.5300000309944153,
+      "time_s": 179.65,
+      "peak_mb": 614.029296875,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 1,
+        "model": {
+          "d": 4,
+          "hidden_channels": 128,
+          "num_layers": 4,
+          "learner_hidden": 128,
+          "learner_gnn_layers": 2,
+          "dropout": 0,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            64
+          ],
+          "backbone_F": "mlp",
+          "backbone_C": "mlp",
+          "map_type_F": "orthogonal",
+          "map_type_C": "general",
+          "orth_trans": "cayley",
+          "sheaf_act": "gelu",
+          "inter_layer_norm": false
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d4_h128_Fort_Cgen_mlp_dr0_L4_lr3_wd3",
+      "split_idx": 2,
+      "val_acc": 0.5600000023841858,
+      "test_acc": 0.5580000281333923,
+      "time_s": 190.07,
+      "peak_mb": 614.029296875,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 2,
+        "model": {
+          "d": 4,
+          "hidden_channels": 128,
+          "num_layers": 4,
+          "learner_hidden": 128,
+          "learner_gnn_layers": 2,
+          "dropout": 0,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            64
+          ],
+          "backbone_F": "mlp",
+          "backbone_C": "mlp",
+          "map_type_F": "orthogonal",
+          "map_type_C": "general",
+          "orth_trans": "cayley",
+          "sheaf_act": "gelu",
+          "inter_layer_norm": false
+        }
+      },
+      "error": null
+    },
+    {
+      "config": "d4_h64_Fort_Cgen_mlp_dr0_L4_lr3_wd3",
+      "split_idx": 2,
+      "val_acc": 0.5680000185966492,
+      "test_acc": 0.5950000286102295,
+      "time_s": 262.01,
+      "peak_mb": 357.56787109375,
+      "cfg_override": {
+        "dataset": "Citeseer",
+        "split_idx": 0,
+        "train_on_trainval": false,
+        "epochs": 1000,
+        "patience": 100,
+        "lr": 0.001,
+        "weight_decay": 0.0005,
+        "seed": 2,
+        "model": {
+          "d": 4,
+          "hidden_channels": 64,
+          "num_layers": 4,
+          "learner_hidden": 64,
+          "learner_gnn_layers": 3,
+          "dropout": 0,
+          "left_weights": true,
+          "right_weights": true,
+          "use_eps": true,
+          "norm_eps": 0.001,
+          "mlp_dims": [
+            64
+          ],
+          "backbone_F": "mlp",
+          "backbone_C": "mlp",
+          "map_type_F": "orthogonal",
+          "map_type_C": "general",
+          "orth_trans": "cayley",
+          "sheaf_act": "id",
+          "inter_layer_norm": false
+        }
+      },
+      "error": null
+    }
+  ],
+  "aggregated": {
+    "d2_h64_Fort_Cort_gin_dr25_L2_lr3_wd3": {
+      "mean": 41.50000214576721,
+      "std": 0.2999991178512573,
+      "n": 2,
+      "errors": []
+    },
+    "d2_h128_Fort_Cgen_sage_dr0_L4_lr3_wd3": {
+      "mean": 57.36666917800903,
+      "std": 1.774511031139256,
+      "n": 3,
+      "errors": []
+    },
+    "d3_h64_Fort_Cort_gcn_dr0_L4_lr3_wd3": {
+      "mean": 53.93333633740743,
+      "std": 7.349074129940338,
+      "n": 3,
+      "errors": []
+    },
+    "d3_h64_Fgen_Cort_gin_dr5_L4_lr3_wd3": {
+      "mean": 31.50000075499217,
+      "std": 3.8910150837452107,
+      "n": 3,
+      "errors": []
+    },
+    "d3_h64_Fort_Cgen_gcn_dr5_L3_lr3_wd3": {
+      "mean": 39.70000147819519,
+      "std": 2.0116325669084674,
+      "n": 3,
+      "errors": []
+    },
+    "d4_h64_Fort_Cgen_mlp_dr0_L4_lr3_wd3": {
+      "mean": 51.3666699330012,
+      "std": 8.888320435583262,
+      "n": 3,
+      "errors": []
+    },
+    "d4_h128_Fort_Cgen_mlp_dr0_L4_lr3_wd3": {
+      "mean": 48.233336210250854,
+      "std": 8.79557979416502,
+      "n": 3,
+      "errors": []
+    }
+  }
+}

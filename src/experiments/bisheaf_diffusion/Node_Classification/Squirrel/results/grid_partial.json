@@ -1,0 +1,734 @@
+{
+  "dataset": "Squirrel",
+  "raw": [
+    {
+      "config": "d1_h32_Fgen_Cgen_dr3_sage",
+      "split_idx": 1,
+      "val_acc": 0.3978365659713745,
+      "test_acc": 0.37848222255706787,
+      "time_s": 105.97,
+      "peak_mb": 260.11083984375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr3_sage",
+      "split_idx": 4,
+      "val_acc": 0.411057710647583,
+      "test_acc": 0.4024975895881653,
+      "time_s": 113.37,
+      "peak_mb": 268.49560546875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr3_sage",
+      "split_idx": 2,
+      "val_acc": 0.35576924681663513,
+      "test_acc": 0.3381364047527313,
+      "time_s": 129.89,
+      "peak_mb": 418.58837890625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr3_sage",
+      "split_idx": 0,
+      "val_acc": 0.38100963830947876,
+      "test_acc": 0.37271854281425476,
+      "time_s": 132.61,
+      "peak_mb": 351.17578125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr3_sage",
+      "split_idx": 3,
+      "val_acc": 0.38401442766189575,
+      "test_acc": 0.3938520550727844,
+      "time_s": 160.95,
+      "peak_mb": 383.99462890625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr3_sage",
+      "split_idx": 5,
+      "val_acc": 0.38882213830947876,
+      "test_acc": 0.37848222255706787,
+      "time_s": 114.31,
+      "peak_mb": 261.03271484375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr3_sage",
+      "split_idx": 6,
+      "val_acc": 0.40504810214042664,
+      "test_acc": 0.38712775707244873,
+      "time_s": 113.74,
+      "peak_mb": 268.16259765625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr3_sage",
+      "split_idx": 7,
+      "val_acc": 0.3515625,
+      "test_acc": 0.37848222255706787,
+      "time_s": 123.55,
+      "peak_mb": 418.58837890625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr3_sage",
+      "split_idx": 8,
+      "val_acc": 0.3677884638309479,
+      "test_acc": 0.3515850007534027,
+      "time_s": 146.59,
+      "peak_mb": 351.17578125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr3_sage",
+      "split_idx": 9,
+      "val_acc": 0.387620210647583,
+      "test_acc": 0.36215177178382874,
+      "time_s": 151.68,
+      "peak_mb": 383.99462890625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr5_sage",
+      "split_idx": 0,
+      "val_acc": 0.37680289149284363,
+      "test_acc": 0.3765609860420227,
+      "time_s": 124.02,
+      "peak_mb": 261.03271484375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr5_sage",
+      "split_idx": 1,
+      "val_acc": 0.39963942766189575,
+      "test_acc": 0.3880883753299713,
+      "time_s": 144.19,
+      "peak_mb": 268.16259765625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr5_sage",
+      "split_idx": 2,
+      "val_acc": 0.35757213830947876,
+      "test_acc": 0.359269917011261,
+      "time_s": 126.3,
+      "peak_mb": 418.58837890625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr5_sage",
+      "split_idx": 3,
+      "val_acc": 0.3743990659713745,
+      "test_acc": 0.36887606978416443,
+      "time_s": 132.92,
+      "peak_mb": 351.17578125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr5_sage",
+      "split_idx": 5,
+      "val_acc": 0.3804086744785309,
+      "test_acc": 0.38040345907211304,
+      "time_s": 140.47,
+      "peak_mb": 261.03271484375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr5_sage",
+      "split_idx": 4,
+      "val_acc": 0.3774038553237915,
+      "test_acc": 0.384245902299881,
+      "time_s": 174.16,
+      "peak_mb": 383.99462890625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr5_sage",
+      "split_idx": 6,
+      "val_acc": 0.39963942766189575,
+      "test_acc": 0.3756003677845001,
+      "time_s": 137.27,
+      "peak_mb": 268.16259765625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr5_sage",
+      "split_idx": 7,
+      "val_acc": 0.34375,
+      "test_acc": 0.36695483326911926,
+      "time_s": 131.45,
+      "peak_mb": 418.58837890625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr5_sage",
+      "split_idx": 8,
+      "val_acc": 0.36838942766189575,
+      "test_acc": 0.344860702753067,
+      "time_s": 127.69,
+      "peak_mb": 351.17578125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr5_sage",
+      "split_idx": 9,
+      "val_acc": 0.3930288553237915,
+      "test_acc": 0.34870314598083496,
+      "time_s": 125.97,
+      "peak_mb": 261.03271484375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr3_sage",
+      "split_idx": 1,
+      "val_acc": 0.41766828298568726,
+      "test_acc": 0.3938520550727844,
+      "time_s": 103.82,
+      "peak_mb": 269.63427734375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr3_sage",
+      "split_idx": 0,
+      "val_acc": 0.39483174681663513,
+      "test_acc": 0.394812673330307,
+      "time_s": 154.15,
+      "peak_mb": 386.44482421875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr3_sage",
+      "split_idx": 2,
+      "val_acc": 0.35576924681663513,
+      "test_acc": 0.3400576412677765,
+      "time_s": 131.69,
+      "peak_mb": 421.32861328125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr3_sage",
+      "split_idx": 3,
+      "val_acc": 0.3822115659713745,
+      "test_acc": 0.37944284081459045,
+      "time_s": 130.94,
+      "peak_mb": 353.34765625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr3_sage",
+      "split_idx": 5,
+      "val_acc": 0.3978365659713745,
+      "test_acc": 0.3909702003002167,
+      "time_s": 97.55,
+      "peak_mb": 269.63427734375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr3_sage",
+      "split_idx": 4,
+      "val_acc": 0.39663463830947876,
+      "test_acc": 0.3967339098453522,
+      "time_s": 108.04,
+      "peak_mb": 262.44873046875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr3_sage",
+      "split_idx": 7,
+      "val_acc": 0.35276442766189575,
+      "test_acc": 0.3707973062992096,
+      "time_s": 127.85,
+      "peak_mb": 421.32861328125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr3_sage",
+      "split_idx": 6,
+      "val_acc": 0.41826924681663513,
+      "test_acc": 0.36215177178382874,
+      "time_s": 145.44,
+      "peak_mb": 386.44482421875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr3_sage",
+      "split_idx": 8,
+      "val_acc": 0.3677884638309479,
+      "test_acc": 0.3717579245567322,
+      "time_s": 131.65,
+      "peak_mb": 353.34765625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr3_sage",
+      "split_idx": 9,
+      "val_acc": 0.4056490659713745,
+      "test_acc": 0.38520652055740356,
+      "time_s": 110.72,
+      "peak_mb": 269.63427734375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr5_sage",
+      "split_idx": 0,
+      "val_acc": 0.3852163553237915,
+      "test_acc": 0.39961573481559753,
+      "time_s": 118.52,
+      "peak_mb": 262.44873046875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr5_sage",
+      "split_idx": 1,
+      "val_acc": 0.35036060214042664,
+      "test_acc": 0.34966376423835754,
+      "time_s": 146.39,
+      "peak_mb": 421.32861328125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr5_sage",
+      "split_idx": 4,
+      "val_acc": 0.39723560214042664,
+      "test_acc": 0.4005763530731201,
+      "time_s": 120.7,
+      "peak_mb": 269.63427734375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr5_sage",
+      "split_idx": 2,
+      "val_acc": 0.3834134638309479,
+      "test_acc": 0.3890489935874939,
+      "time_s": 171.1,
+      "peak_mb": 386.44482421875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr5_sage",
+      "split_idx": 3,
+      "val_acc": 0.3774038553237915,
+      "test_acc": 0.3957732915878296,
+      "time_s": 155.15,
+      "peak_mb": 353.34765625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr5_sage",
+      "split_idx": 5,
+      "val_acc": 0.39182692766189575,
+      "test_acc": 0.3938520550727844,
+      "time_s": 128.51,
+      "peak_mb": 262.44873046875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr5_sage",
+      "split_idx": 6,
+      "val_acc": 0.3804086744785309,
+      "test_acc": 0.3381364047527313,
+      "time_s": 127.89,
+      "peak_mb": 421.32861328125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr5_sage",
+      "split_idx": 7,
+      "val_acc": 0.39663463830947876,
+      "test_acc": 0.38040345907211304,
+      "time_s": 126.68,
+      "peak_mb": 269.63427734375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr5_sage",
+      "split_idx": 9,
+      "val_acc": 0.3743990659713745,
+      "test_acc": 0.35542747378349304,
+      "time_s": 144.67,
+      "peak_mb": 353.34765625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cort_dr5_sage",
+      "split_idx": 8,
+      "val_acc": 0.39182692766189575,
+      "test_acc": 0.3717579245567322,
+      "time_s": 150.4,
+      "peak_mb": 386.44482421875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr3_sage",
+      "split_idx": 0,
+      "val_acc": 0.3978365659713745,
+      "test_acc": 0.3832852840423584,
+      "time_s": 174.49,
+      "peak_mb": 262.44873046875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr3_sage",
+      "split_idx": 1,
+      "val_acc": 0.3647836744785309,
+      "test_acc": 0.3506243824958801,
+      "time_s": 131.33,
+      "peak_mb": 421.32861328125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr3_sage",
+      "split_idx": 2,
+      "val_acc": 0.41045674681663513,
+      "test_acc": 0.369836688041687,
+      "time_s": 147.26,
+      "peak_mb": 269.63427734375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr3_sage",
+      "split_idx": 3,
+      "val_acc": 0.3804086744785309,
+      "test_acc": 0.38136404752731323,
+      "time_s": 130.49,
+      "peak_mb": 353.34765625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr3_sage",
+      "split_idx": 4,
+      "val_acc": 0.38641828298568726,
+      "test_acc": 0.3890489935874939,
+      "time_s": 154.69,
+      "peak_mb": 386.44482421875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr3_sage",
+      "split_idx": 6,
+      "val_acc": 0.38882213830947876,
+      "test_acc": 0.34966376423835754,
+      "time_s": 129.22,
+      "peak_mb": 421.32861328125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr3_sage",
+      "split_idx": 7,
+      "val_acc": 0.40745192766189575,
+      "test_acc": 0.4063400328159332,
+      "time_s": 103.99,
+      "peak_mb": 269.63427734375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr3_sage",
+      "split_idx": 5,
+      "val_acc": 0.395432710647583,
+      "test_acc": 0.37848222255706787,
+      "time_s": 208.84,
+      "peak_mb": 262.44873046875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr3_sage",
+      "split_idx": 8,
+      "val_acc": 0.3701923191547394,
+      "test_acc": 0.369836688041687,
+      "time_s": 131.66,
+      "peak_mb": 353.34765625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr3_sage",
+      "split_idx": 9,
+      "val_acc": 0.38701924681663513,
+      "test_acc": 0.3659942150115967,
+      "time_s": 155.96,
+      "peak_mb": 386.44482421875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr5_sage",
+      "split_idx": 0,
+      "val_acc": 0.3413461744785309,
+      "test_acc": 0.34197884798049927,
+      "time_s": 129.15,
+      "peak_mb": 421.32861328125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr5_sage",
+      "split_idx": 1,
+      "val_acc": 0.39723560214042664,
+      "test_acc": 0.3823246657848358,
+      "time_s": 134.31,
+      "peak_mb": 269.63427734375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr5_sage",
+      "split_idx": 2,
+      "val_acc": 0.36298078298568726,
+      "test_acc": 0.3890489935874939,
+      "time_s": 119.46,
+      "peak_mb": 262.44873046875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr5_sage",
+      "split_idx": 3,
+      "val_acc": 0.37319713830947876,
+      "test_acc": 0.3573486804962158,
+      "time_s": 132.23,
+      "peak_mb": 353.34765625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr5_sage",
+      "split_idx": 6,
+      "val_acc": 0.38641828298568726,
+      "test_acc": 0.37848222255706787,
+      "time_s": 124.34,
+      "peak_mb": 269.63427734375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr5_sage",
+      "split_idx": 5,
+      "val_acc": 0.3353365361690521,
+      "test_acc": 0.3458213210105896,
+      "time_s": 145.24,
+      "peak_mb": 421.32861328125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr5_sage",
+      "split_idx": 7,
+      "val_acc": 0.39483174681663513,
+      "test_acc": 0.359269917011261,
+      "time_s": 125.69,
+      "peak_mb": 262.44873046875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr5_sage",
+      "split_idx": 4,
+      "val_acc": 0.37680289149284363,
+      "test_acc": 0.3909702003002167,
+      "time_s": 192.56,
+      "peak_mb": 386.44482421875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr5_sage",
+      "split_idx": 8,
+      "val_acc": 0.371995210647583,
+      "test_acc": 0.34966376423835754,
+      "time_s": 133.19,
+      "peak_mb": 353.34765625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr3_sage",
+      "split_idx": 1,
+      "val_acc": 0.4008413553237915,
+      "test_acc": 0.37944284081459045,
+      "time_s": 105.71,
+      "peak_mb": 263.86474609375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr3_sage",
+      "split_idx": 0,
+      "val_acc": 0.3521634638309479,
+      "test_acc": 0.36695483326911926,
+      "time_s": 133.74,
+      "peak_mb": 424.06884765625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cgen_dr5_sage",
+      "split_idx": 9,
+      "val_acc": 0.3930288553237915,
+      "test_acc": 0.37367913126945496,
+      "time_s": 156.3,
+      "peak_mb": 269.63427734375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr3_sage",
+      "split_idx": 2,
+      "val_acc": 0.39423078298568726,
+      "test_acc": 0.38712775707244873,
+      "time_s": 154.17,
+      "peak_mb": 388.89501953125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr3_sage",
+      "split_idx": 3,
+      "val_acc": 0.38100963830947876,
+      "test_acc": 0.3823246657848358,
+      "time_s": 135.4,
+      "peak_mb": 355.51953125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr3_sage",
+      "split_idx": 4,
+      "val_acc": 0.39963942766189575,
+      "test_acc": 0.38616713881492615,
+      "time_s": 139.77,
+      "peak_mb": 263.86474609375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr3_sage",
+      "split_idx": 6,
+      "val_acc": 0.41526442766189575,
+      "test_acc": 0.38136404752731323,
+      "time_s": 109.63,
+      "peak_mb": 271.10595703125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr3_sage",
+      "split_idx": 5,
+      "val_acc": 0.34375,
+      "test_acc": 0.35446685552597046,
+      "time_s": 130.36,
+      "peak_mb": 424.06884765625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr3_sage",
+      "split_idx": 7,
+      "val_acc": 0.3804086744785309,
+      "test_acc": 0.39289143681526184,
+      "time_s": 147.2,
+      "peak_mb": 388.89501953125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr3_sage",
+      "split_idx": 8,
+      "val_acc": 0.36899039149284363,
+      "test_acc": 0.3525456190109253,
+      "time_s": 155.57,
+      "peak_mb": 355.51953125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr5_sage",
+      "split_idx": 0,
+      "val_acc": 0.395432710647583,
+      "test_acc": 0.3909702003002167,
+      "time_s": 138.73,
+      "peak_mb": 271.10595703125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr5_sage",
+      "split_idx": 1,
+      "val_acc": 0.3569711744785309,
+      "test_acc": 0.34774255752563477,
+      "time_s": 153.91,
+      "peak_mb": 424.06884765625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr3_sage",
+      "split_idx": 9,
+      "val_acc": 0.418870210647583,
+      "test_acc": 0.3640730082988739,
+      "time_s": 183.21,
+      "peak_mb": 263.86474609375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr5_sage",
+      "split_idx": 3,
+      "val_acc": 0.3701923191547394,
+      "test_acc": 0.38136404752731323,
+      "time_s": 155.49,
+      "peak_mb": 355.51953125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr5_sage",
+      "split_idx": 2,
+      "val_acc": 0.38461539149284363,
+      "test_acc": 0.3909702003002167,
+      "time_s": 179.0,
+      "peak_mb": 388.89501953125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr5_sage",
+      "split_idx": 4,
+      "val_acc": 0.40204328298568726,
+      "test_acc": 0.4140249490737915,
+      "time_s": 118.21,
+      "peak_mb": 271.10595703125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr5_sage",
+      "split_idx": 5,
+      "val_acc": 0.3353365361690521,
+      "test_acc": 0.34390008449554443,
+      "time_s": 140.33,
+      "peak_mb": 424.06884765625,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr5_sage",
+      "split_idx": 6,
+      "val_acc": 0.3858173191547394,
+      "test_acc": 0.36791545152664185,
+      "time_s": 132.69,
+      "peak_mb": 263.86474609375,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr5_sage",
+      "split_idx": 7,
+      "val_acc": 0.3515625,
+      "test_acc": 0.3756003677845001,
+      "time_s": 151.08,
+      "peak_mb": 355.51953125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr5_sage",
+      "split_idx": 9,
+      "val_acc": 0.403245210647583,
+      "test_acc": 0.3890489935874939,
+      "time_s": 149.07,
+      "peak_mb": 271.10595703125,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fgen_Cgen_dr3_gin",
+      "split_idx": 0,
+      "val_acc": 0.34795674681663513,
+      "test_acc": 0.36695483326911926,
+      "time_s": 121.28,
+      "peak_mb": 419.11279296875,
+      "error": null
+    },
+    {
+      "config": "d1_h32_Fort_Cort_dr5_sage",
+      "split_idx": 8,
+      "val_acc": 0.3852163553237915,
+      "test_acc": 0.38712775707244873,
+      "time_s": 185.53,
+      "peak_mb": 388.89501953125,
+      "error": null
+    }
+  ]
+}
